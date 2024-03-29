@@ -15,7 +15,7 @@ Sum = 2. Die A = Die B = 1.
 
 Part-B
 
-Now comes the real challenge. You were happily spending a lazy afternoon playing
+Now comes the real challenge. You were happily spending a lazy afternoon playing 
 your board game with your dice when suddenly the mischievous Norse God Loki ( You
 love Thor too much & Loki didn’t like that much ) appeared.
 Loki dooms your dice for his fun removing all the “Spots” off the dice.
@@ -28,8 +28,10 @@ But in order to play your game, the probability of obtaining the Sums must remai
 same!
 So if you could only roll P(Sum = 2) = 1/X, the new dice must have the spots reattached
 such that those probabilities are not changed.
+
 Input:
 ● Die_A = [1, 2, 3, 4, 5, 6] & Die B = Die_A = [1, 2, 3, 4, 5, 6]
+
 Output:
 ● A Transform Function undoom_dice that takes (Die_A, Die_B) as input &
 outputs New_Die_A = [?, ?, ?, ?, ?, ?],New_Die_BB = [?, ?,
