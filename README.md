@@ -23,7 +23,9 @@ No problem! You have the tools to re-attach the “Spots” back on the Dice.
 However, Loki has doomed your dice with the following conditions:
 
 ● Die A cannot have more than 4 Spots on a face.
+
 ● Die A may have multiple faces with the same number of spots.
+
 ● Die B can have as many spots on a face as necessary i.e. even more than 6.
 
 But in order to play your game, the probability of obtaining the Sums must remain the
