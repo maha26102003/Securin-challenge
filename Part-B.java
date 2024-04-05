@@ -3,7 +3,6 @@ import java.util.*;
 public class Main
 {
     // finding probabilties for different combinations of A and B
-  
     public static int[] cal_prob(int[] a,int[] b){
         int[] t=new int[11];
         for(int i=0;i<a.length;i++){
@@ -14,19 +13,22 @@ public class Main
         }
         return t;
     }
-  
     //Dooming dice A
-  
-    public static void undoom_dice(int[] a){
+    public static void undoom_dice(int[] a,int[] b){
         for(int i=0;i<a.length;i++){
             if(a[i]>4){
                a[i]-=3;
             }
         }
+        Arrays.sort(a);
+        System.out.println("Undoomed Dice A:"+Arrays.toString(a));
+        List<Integer> cur=new ArrayList<>();
+		int t=8;
+        cur.add(1);
+        cur.add(t);
+		findcombinations(t-1,6,2,cur,a);
     }
-  
     //probabilities of possible sums obtained previously
-  
     public static int[] cur_prob=new int[11];
     
     public static void findcombinations(int n,int k,int s,List<Integer> cur,int[] a){
@@ -50,21 +52,14 @@ public class Main
 		cur_prob=cal_prob(a,b);
 		System.out.println("Original Dice A:"+Arrays.toString(a));
 		System.out.println("Original Dice B:"+Arrays.toString(b));
-		undoom_dice(a);
-		System.out.println("Undoomed Dice A:"+Arrays.toString(a));
-		List<Integer> cur=new ArrayList<>();
-		int t=8;
-        cur.add(1);
-        cur.add(t);
-		findcombinations(t-1,6,2,cur,a);
+		undoom_dice(a,b);
 	}
 }
 
-/*Output
-
-  Original Dice A:[1, 2, 3, 4, 5, 6]
+/*
+Output:
+Original Dice A:[1, 2, 3, 4, 5, 6]
 Original Dice B:[1, 2, 3, 4, 5, 6]
-Undoomed Dice A:[1, 2, 3, 4, 2, 3]
+Undoomed Dice A:[1, 2, 2, 3, 3, 4]
 Undoomed Dice B:[1, 3, 4, 5, 6, 8]
-
-  */
+*/
